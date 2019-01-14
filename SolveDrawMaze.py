@@ -29,7 +29,8 @@ def showPNG(maze):
     
     plt.figure(figsize=(10, 5))
 
-    plt.legend(handles = [start_patch,end_patch], \
+    if solution:
+        plt.legend(handles = [start_patch,end_patch], \
                loc='center left', bbox_to_anchor=(1, 0.5))
     
     plt.imshow(gridCopy, cmap=plt.cm.ocean,interpolation = "nearest")
