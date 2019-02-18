@@ -1,5 +1,5 @@
 # maze_solving_image_processing
-Libraries used matplot, numpy, openCV, mazelib
+Libraries used matplot, numpy, openCV, mazelib, pandas, scipy, scikit-learn
 The basic idea here is to solve the given maze using the shortest-path algorithm.
 the library mazelib has been used so far to solve complex mazes.
 
