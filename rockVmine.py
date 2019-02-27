@@ -17,4 +17,3 @@ def load_wine_data(wine_path=PATH):
     return pd.read_csv(csv_path)
 
 red = load_wine_data()
-#white = pd.read_csv('winequality-white.csv', low_memory=False, sep=';')
