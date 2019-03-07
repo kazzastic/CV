@@ -22,3 +22,29 @@ for radius in range(0, 175, 25):
 cv2.imshow("concentric circle", canvas)
 cv2.waitKey(0)
 
+'''
+#Book code 
+canvas = np.zeros((500, 500, 3), dtype="uint8")
+for i in range(0,500):
+    radius = np.random.randint(5, high = 200)
+    color = np.random.randint(0, high = 256, size=(3,)).tolist()
+    point = np.random.randint(0, high = 300, size = (2,))
+    cv2.circle(canvas, tuple(point), radius, color, -1)
+cv2.imshow("beauty", canvas)
+cv2.waitKey(0)
+'''
+
+#my code simple shiz
+canvas = np.zeros((500, 500, 3), dtype = "uint8")
+for i in range(0, 100):
+    radius = np.random.randint(5, high = 250)
+    first = np.random.randint(0, high = 256)
+    second = np.random.randint(0, high = 256)
+    third = np.random.randint(0, high = 256)
+    color = (first, second, third)
+    first_pt = np.random.randint(0, high = 300)
+    second_pt = np.random.randint(0, high = 300)
+    cv2.circle(canvas, (first_pt, second_pt), radius, color, -1)
+cv2.imshow("beauty", canvas)
+cv2.waitKey(0)
+
