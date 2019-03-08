@@ -13,4 +13,3 @@ image = cv2.imread(args["image"])
 #from imutils calling the rotation function
 rotated = im.rotate(image, 180)
 cv2.imshow("rotated", rotated)
-cv2.waitKey(0)
