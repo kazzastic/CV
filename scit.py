@@ -20,11 +20,17 @@ def load_housing_data(data_path = DATA_PATH):
     return pd.read_csv(csv_path, index_col = 0)
 
 data = load_housing_data()
+#simply use this
+data = pd.read_csv('SCIT dataset - Sheet1.csv',index_col = 0)
 # Already mentioned in our dataset, the distrcits are 
 # East, West, South, Central, Malir, Korangi
 Districts = ('East', 'West', 'South', 'Central', 'Malir', 'Korangi')
 y_pos = np.arange(len(Districts))
-frequency = [24, 1, 5, 19, 7, 4]
+
+frequency = []
+for i in range(1,7):
+    dist = data[data['X1']==i]
+    frequency.append(len(dist)) 
 
 plt.bar(y_pos, frequency, align = 'center', alpha = 0.5)
 plt.xticks(y_pos, Districts)
