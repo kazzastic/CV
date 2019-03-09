@@ -16,4 +16,4 @@ DATA_PATH = os.path.join("datasets", "housing")
 
 def load_housing_data(data_path = DATA_PATH):
     csv_path = os.path.join(data_path, "SCIT dataset.csv")
-    return pd.read_csv(csv_path)
+    return pd.read_csv(csv_path, index_col = 0)
