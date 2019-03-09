@@ -21,7 +21,7 @@ def load_housing_data(data_path = DATA_PATH):
 
 data = load_housing_data()
 #simply use this
-data = pd.read_csv('SCIT dataset - Sheet1.csv',index_col = 0)
+#data = pd.read_csv('SCIT dataset - Sheet1.csv',index_col = 0)
 # Already mentioned in our dataset, the distrcits are 
 # East, West, South, Central, Malir, Korangi
 Districts = ('East', 'West', 'South', 'Central', 'Malir', 'Korangi')
@@ -34,5 +34,6 @@ for i in range(1,7):
 
 plt.bar(y_pos, frequency, align = 'center', alpha = 0.5)
 plt.xticks(y_pos, Districts)
-plt.yticks('Frequency')
+plt.ylabel('Frequency')
 plt.title("Simple Bar Diagram")
+plt.show()
