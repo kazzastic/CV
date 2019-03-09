@@ -102,11 +102,31 @@ Korangi_fourty = Korangi[data['X2'] > 45]
 
 '''
 plotting the graph code
-'''
+
 plt.bar(y_pos, frequency, align = 'center', alpha = 0.5)
 plt.xticks(y_pos, Districts)
 plt.ylabel('Frequency')
 plt.title("Simple Bar Diagram")
 plt.show()
+'''
+'''
+plotting the second graph
+'''
+#data of plot
+n_groups = 6
 
+#create plot
+fig, ax = plt.subplots()
+index = np.arange(n_groups)
+bar_width = 0.35
+opacity = 0.8
 
+rects1 = plt.bar(index, East_ten, bar_width, aplha = opacity, color = 'b', label = "some")
+
+plt.xlabel('Districts')
+plt.ylabel("Duration")
+plt.title("I hope this works")
+plt.xticks(y_pos, Districts)
+plt.legend()
+plt.tight_layout()
+plt.show()
