@@ -20,7 +20,8 @@ print("wrap of max by np: {}".format(np.uint8([50]) - np.uint8([100])))
 
 #generating one array(matrix) and multiplying it with 100
 #and adding that with original numpy array(image)
-M = np.ones(image.shape, dtype = "uint8")*1000
+M = np.ones(image.shape, dtype = "uint8")*100
+print(M)
 added = cv2.add(image, M)
 cv2.imshow("added img", added)
 
