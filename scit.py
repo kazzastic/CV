@@ -42,13 +42,22 @@ for i in range(1,7):
 Selecting data from East Column and dividing them according 
 to thier time/duration
 '''
+var_Et = []
+var_Et2 = []
+var_Et3 = []
+var_Et4 = []
+var_Et5 = []
 East = data[data['X1'] == 1]
 East_ten = East[data['X2'] <= 10]
 East_eleven = East[(data['X2'] >= 11) & (data['X2'] <= 20)]
 East_twenty = East[(data['X2'] >= 21) & (data['X2'] <= 30)]
 East_thirty = East[(data['X2'] >= 31) & (data['X2'] <= 45)]
 East_fourty = East[data['X2'] > 45]
-
+var_Et.append(len(East_ten))
+var_Et2.append(len(East_eleven))
+var_Et3.append(len(East_twenty))
+var_Et4.append(len(East_thirty))
+var_Et5.append(len(East_fourty))
 '''
 Selecting the data from West column and dividing them 
 according to thier time/duration
@@ -117,16 +126,19 @@ n_groups = 6
 
 #create plot
 fig, ax = plt.subplots()
-index = np.arange(n_groups)
 bar_width = 0.35
 opacity = 0.8
 
-rects1 = plt.bar(index, East_ten, bar_width, aplha = opacity, color = 'b', label = "some")
+rects1 = plt.bar(np.arange(1), var_Et, bar_width, alpha = opacity, color = 'b', label = "1-10")
+rects2 = plt.bar(np.arange(1)+bar_width, var_Et2, bar_width, alpha = opacity, color = 'r', label = "11-20")
+rects3 = plt.bar(np.arange(1)+bar_width*2, var_Et3, bar_width, alpha = opacity, color = 'g', label = "21-30")
+rects4 = plt.bar(np.arange(1)+bar_width*3, var_Et4, bar_width, alpha = opacity, color = 'y', label = "31-45")
+rects5 = plt.bar(np.arange(1)+bar_width*4, var_Et5, bar_width, alpha = opacity, color = 'm', label = "45+")
 
 plt.xlabel('Districts')
 plt.ylabel("Duration")
 plt.title("I hope this works")
-plt.xticks(y_pos, Districts)
+plt.xticks(y_pos+bar_width, Districts)
 plt.legend()
 plt.tight_layout()
 plt.show()
