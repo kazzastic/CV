@@ -153,13 +153,13 @@ rects2 = plt.bar(np.arange(1)+bar_width, var_Et2, bar_width, alpha = opacity, co
 rects3 = plt.bar(np.arange(1)+bar_width*2, var_Et3, bar_width, alpha = opacity, color = 'g', label = "21-30")
 rects4 = plt.bar(np.arange(1)+bar_width*3, var_Et4, bar_width, alpha = opacity, color = 'y', label = "31-45")
 rects5 = plt.bar(np.arange(1)+bar_width*4, var_Et5, bar_width, alpha = opacity, color = 'm', label = "45+")
-'''
+
 rects1 = plt.bar(np.arange(2), var_wt, bar_width, alpha = opacity, color = 'b')
 rects2 = plt.bar(np.arange(2)+bar_width, var_wt2, bar_width, alpha = opacity, color = 'r')
 rects3 = plt.bar(np.arange(2)+bar_width*2, var_wt3, bar_width, alpha = opacity, color = 'g')
 rects4 = plt.bar(np.arange(2)+bar_width*3, var_wt4, bar_width, alpha = opacity, color = 'y')
 rects5 = plt.bar(np.arange(2)+bar_width*4, var_wt5, bar_width, alpha = opacity, color = 'm')
-'''
+
 rects1 = plt.bar(np.arange(3), var_st, bar_width, alpha = opacity, color = 'b')
 rects2 = plt.bar(np.arange(3)+bar_width, var_st2, bar_width, alpha = opacity, color = 'r')
 rects3 = plt.bar(np.arange(3)+bar_width*2, var_st3, bar_width, alpha = opacity, color = 'g')
