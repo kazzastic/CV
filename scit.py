@@ -133,38 +133,13 @@ plotting the graph code
 
 plt.bar(y_pos, frequency, align = 'center', alpha = 0.5)
 plt.xticks(y_pos, Districts)
-
-plt.yticks('Frequency')
-plt.title("Simple Bar Diagram")
-
-freq = [[]]
-
-for i in range(1,7):
-    dist = data[data['X1']==i]
-    freq[i-1].append(len(dist[(dist['X2'] >= 11) & (dist['X2'] <= 20)]))
-    freq[i-1].append(len(dist[(dist['X2'] >= 21) & (dist['X2'] <= 30)]))
-    freq[i-1].append(len(dist[(dist['X2'] >= 31) & (dist['X2'] <= 45)]))
-    freq[i-1].append(len(dist[dist['X2'] > 45]))
-    freq.append([])
-freq.pop(6)
-
-frq = [[freq[j][i] for j in range(len(freq))] for i in range(len(freq[0]))] 
-
-plt.bar(y_pos-0.3,frq[0],width = 0.2)
-plt.bar(y_pos-0.1,frq[1],width = 0.2)
-plt.bar(y_pos+0.1,frq[2],width = 0.2)
-plt.bar(y_pos+0.3,frq[3],width = 0.2)
-
-
-
-=======
 plt.ylabel('Frequency')
 plt.title("Simple Bar Diagram")
 plt.show()
 '''
 '''
 plotting the second graph
-'''
+
 #data of plot
 n_groups = 6
 
@@ -197,4 +172,30 @@ plt.title("I hope this works")
 plt.xticks(y_pos+bar_width, Districts)
 plt.legend()
 plt.tight_layout()
+plt.show()
+'''
+
+'''
+plotting the graph code
+'''
+plt.bar(y_pos, frequency, align = 'center', alpha = 0.5)
+plt.xticks(y_pos, Districts)
+plt.yticks('Frequency')
+plt.title("Simple Bar Diagram")
+freq = [[]]
+for i in range(1,7):
+    dist = data[data['X1']==i]
+    freq[i-1].append(len(dist[(dist['X2'] >= 11) & (dist['X2'] <= 20)]))
+    freq[i-1].append(len(dist[(dist['X2'] >= 21) & (dist['X2'] <= 30)]))
+    freq[i-1].append(len(dist[(dist['X2'] >= 31) & (dist['X2'] <= 45)]))
+    freq[i-1].append(len(dist[dist['X2'] > 45]))
+    freq.append([])
+freq.pop(6)
+frq = [[freq[j][i] for j in range(len(freq))] for i in range(len(freq[0]))] 
+plt.bar(y_pos-0.3,frq[0],width = 0.2)
+plt.bar(y_pos-0.1,frq[1],width = 0.2)
+plt.bar(y_pos+0.1,frq[2],width = 0.2)
+plt.bar(y_pos+0.3,frq[3],width = 0.2)
+
+plt.ylabel('Frequency')
 plt.show()
