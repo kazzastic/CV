@@ -6,7 +6,6 @@ Created on Sun Mar 10 23:31:18 2019
 @author: kazzastic
 """
 
-import numpy as np
 import os
 import tarfile
 import matplotlib.pyplot as plt
@@ -16,6 +15,39 @@ import pandas as pd
 data = pd.read_csv('SCIT dataset.csv',index_col = 0)
 Transportation = ["Van", "Private Transport", "Car", "Bike", "Walk"]
 y_pos = np.arange(len(Transportation))
+
+def multi_chart():
+    freq = [[]]
+    for i in range(1,6):
+        dist = data[data['X3']==i]
+        freq[i-1].append(len(dist[(dist['X2'] >= 11) & (dist['X2'] <= 20)]))
+        freq[i-1].append(len(dist[(dist['X2'] >= 21) & (dist['X2'] <= 30)]))
+        freq[i-1].append(len(dist[(dist['X2'] >= 31) & (dist['X2'] <= 45)]))
+        freq[i-1].append(len(dist[dist['X2'] > 45]))
+        freq.append([])
+    freq.pop(5)
+    
+    frq = [[freq[j][i] for j in range(len(freq))] for i in range(len(freq[0]))] 
+    plt.bar(y_pos-0.3,frq[0],width = 0.2)
+    plt.bar(y_pos-0.1,frq[1],width = 0.2)
+    plt.bar(y_pos+0.1,frq[2],width = 0.2)
+    plt.bar(y_pos+0.3,frq[3],width = 0.2)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 Van = data[data['X3'] == 1]
 Pvt = data[data['X3'] == 2]
