@@ -14,7 +14,7 @@ image = cv2.imread(args["image"])
 image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 
 #implement guassian blurr
-blurr = cv2.GaussianBlur(image, (5,5), 1)
+blurr = cv2.GaussianBlur(image, (5,5), 0)
 
 cv2.imshow("Gaussain Blur", blurr)
 
