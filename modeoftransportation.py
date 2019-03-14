@@ -11,7 +11,7 @@ import tarfile
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
-.
+
 data = pd.read_csv('SCIT dataset.csv',index_col = 0)
 Transportation = ["Van", "Private Transport", "Car", "Bike", "Walk"]
 y_pos = np.arange(len(Transportation))

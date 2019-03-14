@@ -26,6 +26,7 @@ y_pos = np.arange(len(Districts))
 Starting of multiple bar chart
 '''
 def multi_chart():
+    data = pd.read_csv('SCIT dataset.csv',index_col = 0)
     freq = [[]]
     for i in range(1,7):
         dist = data[data['X1']==i]
