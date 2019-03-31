@@ -23,7 +23,7 @@ known_face_encodings = [
 known_face_names = [
     "Barak Boi" ,
     "Biden Darling" ,
-    "Saad naked"
+    "Saad"
     ]
 
 #load an image of an unknown face
