@@ -36,7 +36,7 @@ def working(file):
       for j in range(0, 264):
           if(arr[i][j] == 255):
               arr[i][j] = 1
-    print(arr)
+    
 if __name__ == "__main__": 
     file = 'mazegreen.jpg' 
     working(file)

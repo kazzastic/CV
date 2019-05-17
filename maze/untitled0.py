@@ -13,7 +13,7 @@ import matplotlib.pyplot as plt
 from copy import deepcopy
 
 
-'''
+
 m = Maze()
 m.generator = Prims(27, 34)
 m.generate()
@@ -21,8 +21,9 @@ m.generate()
 m.solver = WallFollower()
 m.generate_entrances()
 m.solve()
+sol = m.solutions
+maze = m.grid
 '''
-
 def showPNG(maze):
     """Generate a simple image of the maze."""
     gridCopy = deepcopy(maze.grid)
@@ -63,5 +64,5 @@ if __name__ == '__main__':
     m.generate_entrances()    
     m.solver = WallFollower()
     showPNG(m)
-    
+'''
     
