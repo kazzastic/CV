@@ -5,6 +5,7 @@ Created on Fri May 17 05:59:08 2019
 
 @author: kazzastic
 """
+from mazelib import *
 import numpy as np
 import cv2
 
