@@ -31,8 +31,12 @@ def working(file):
     cv2.destroyAllWindows()
     
     arr = np.array(thresh)
-    print(type(arr))
     
+    for i in range(0, 300):
+      for j in range(i, 264):
+          if(arr[i][j] == 255):
+              arr[i][j] = 1
+    print(arr)
 if __name__ == "__main__": 
     file = 'mazegreen.jpg' 
     working(file)

@@ -9,7 +9,7 @@ import numpy as np
 import cv2
 
 file = 'mazegreen.jpg'
-
+5
 img = cv2.imread(file)
 cv2.imshow('The Initial', img)
 cv2.waitKey(0)
@@ -30,4 +30,10 @@ cv2.imshow('Threshold Binary', thresh)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
 
-maze = np.array(thresh)
+arr = np.array(thresh)
+
+for i in range(0, 300):
+    for j in range(i, 264):    
+        if(arr[i][j] == 255):        
+            arr[i][j] = 1
+print(arr)
