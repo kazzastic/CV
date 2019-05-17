@@ -33,7 +33,7 @@ def working(file):
     arr = np.array(thresh)
     
     for i in range(0, 300):
-      for j in range(i, 264):
+      for j in range(0, 264):
           if(arr[i][j] == 255):
               arr[i][j] = 1
     print(arr)
