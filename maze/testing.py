@@ -256,25 +256,32 @@ cv2.destroyAllWindows()
 
 arr = np.array(thresh)
 
-for i in range(0, 300):
-    for j in range(0, 264):    
+for i in range(0, 293):
+    for j in range(0, 257):    
         if(arr[i][j] == 255):        
             arr[i][j] = 1
 
-
-for i in range(0, 300):
-    for j in range(0, 264):    
+for i in range(0, 293):
+    for j in range(0, 257):    
         if(arr[i][j] == 1):        
-            arr[i][j] = 120
+            arr[i][j] = 255
+
+start_row = 0 
+end_row = 292
+start_col = 0
+end_col = 256
+
+arr[start_row][start_col] = 120
+arr[end_row][end_col] = 120
 
 cv2.imshow('Result', arr)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
             
             
-            
+'''          
 my_maze = Maze()
 #my_maze.solver = WallFollower()
 my_maze.generate_entrances(start_outer=True, end_outer=True)
 my_maze.solve()
-
+'''

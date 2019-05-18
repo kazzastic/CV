@@ -35,7 +35,12 @@ def working(file):
     for i in range(0, 300):
       for j in range(0, 264):
           if(arr[i][j] == 255):
-              arr[i][j] = 1
+              arr[i][j] = 150
+    cv2.imshow('Result', arr)
+    cv2.waitKey(0)
+    cv2.destroyAllWindows()         
+     
+    #start_col, start_row = [0][0]
     
 if __name__ == "__main__": 
     file = 'mazegreen.jpg' 
