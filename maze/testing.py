@@ -261,18 +261,23 @@ for i in range(0, 293):
         if(arr[i][j] == 255):        
             arr[i][j] = 1
 
+canny = cv2.Canny(blurred, 30, 150)
+cv2.imshow('Canny', canny)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
+cnts = cv2.findContours(canny.copy(), cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)[0]
+new = img.copy()
+cv2.drawContours(new, cnts, -1, (0,255,0),2)
+cv2.imshow('Cont', new)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
+
+
+
 for i in range(0, 293):
     for j in range(0, 257):    
         if(arr[i][j] == 1):        
             arr[i][j] = 255
-
-start_row = 0 
-end_row = 292
-start_col = 0
-end_col = 256
-
-arr[start_row][start_col] = 120
-arr[end_row][end_col] = 120
 
 cv2.imshow('Result', arr)
 cv2.waitKey(0)
