@@ -21,6 +21,23 @@ txt = ts.image_to_string(Image.open(file))
 os.remove(file)
 print(txt)
 
+
 cv2.imshow("Image", ocr_gray)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
+
+
+crop = cv2.imread('cropped.jpeg')
+crop_gray = cv2.cvtColor(crop, cv2.COLOR_BGR2GRAY)
+_, g = cv2.threshold(crop_gray, 0, 255, cv2.THRESH_BINARY | cv2.THRESH_OTSU)
+
+f = "{}.png".format(os.getpid())
+cv2.imwrite(f, g)
+
+txt2 = ts.image_to_string(Image.open(f))
+os.remove(f)
+print(txt2)
+
+cv2.imshow("Cropped", crop_gray)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
