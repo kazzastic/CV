@@ -17,7 +17,7 @@ gray = cv2.threshold(ocr_gray, 0, 255, cv2.THRESH_BINARY | cv2.THRESH_OTSU)[1]
 file = "{}.png".format(os.getpid())
 cv2.imwrite(file, gray)
 
-txt = ts.image_to_string(Image.open(file))
+txt = ts.image_to_osd(Image.open(file))
 os.remove(file)
 print(txt)
 
@@ -34,7 +34,7 @@ _, g = cv2.threshold(crop_gray, 0, 255, cv2.THRESH_BINARY | cv2.THRESH_OTSU)
 f = "{}.png".format(os.getpid())
 cv2.imwrite(f, g)
 
-txt2 = ts.image_to_string(Image.open(f))
+txt2 = ts.image_to_boxes(Image.open(f))
 os.remove(f)
 print(txt2)
 
