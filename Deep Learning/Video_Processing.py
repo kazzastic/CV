@@ -38,7 +38,7 @@ def video_save():
     while(cap.isOpened()):
         ret, frame = cap.read()
         if ret==True:
-            frame = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
+            #frame = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
             
             # write the flipped frame
             out.write(frame)
