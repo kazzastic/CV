@@ -7,6 +7,7 @@ Created on Tue Jun  4 12:41:19 2019
 """
 
 import cv2
+import time as t
 
 def show_video():
     cap = cv2.VideoCapture(0)
@@ -51,3 +52,27 @@ def video_save():
     cap.release()
     out.release()
     cv2.destroyAllWindows()
+
+
+def read_video():
+    cap = cv2.VideoCapture('Kazim.avi')
+    
+    if cap.isOpened()==False:
+        print("What the hell dude??")
+        
+    while cap.isOpened():
+        ret, frame = cap.read()
+        
+        if ret == True:
+            t.sleep(1/10)
+            cv2.imshow('Kazim lol', frame)
+            
+            if cv2.waitKey(10) & 0xFF == ord('q'):
+                break
+        else:
+            break
+        
+    cap.release()
+    cv2.destroyAllWindows()
+    
+read_video()
