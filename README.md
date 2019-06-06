@@ -11,7 +11,7 @@ some really amazing works here include
 - Really cool OCR detection simple intro code [here](https://github.com/kazzastic/CV/blob/master/OCR.py)
 
 and yea just 
-```python
+```bash 
 pip install opencv-python
 pip install face_recognition 
 pip install PIL 
