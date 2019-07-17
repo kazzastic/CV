@@ -74,5 +74,4 @@ def read_video():
         
     cap.release()
     cv2.destroyAllWindows()
-    
-read_video()
+
