@@ -10,6 +10,8 @@ some really amazing works here include
 
 - Really cool OCR detection simple intro code [here](https://github.com/kazzastic/CV/blob/master/OCR.py)
 
+- Image classification using GoogleNet and ImageNet [here](https://github.com/kazzastic/CV/blob/master/Deep%20Learning/image_classification.ipynb)
+
 and yea just 
 ```bash 
 pip install opencv-python
