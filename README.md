@@ -1,10 +1,20 @@
-# maze_solving_image_processing
-Libraries used matplot, numpy, openCV, mazelib, pandas, scipy, scikit-learn
-The basic idea here is to solve the given maze using the shortest-path algorithm.
-the library mazelib has been used so far to solve complex mazes.
+# Image Processing Practices 
+All the Image Processing courses I have done and their short codes are just here as some sort of "anecdotes" I guess.
+some really amazing works here include 
 
-The second step is supposed to be image processing, where the given image would be converted 
-into the numbers(1's and 0's) which the library mazelib can process and solve on its own.
+- Maze solved on an image with BFS [here](https://github.com/kazzastic/CV/tree/master/maze)
 
-The third step is to integrate the above given processing of image processing and maze solving in 
-real life maze solving car build upon raspberry pi using python and RPI GPIO library.
+- Face recognition without machine learing [here](https://github.com/kazzastic/CV/blob/master/face_rec.py)
+
+- Specific human face recognition with machine learning [here](https://github.com/kazzastic/CV/blob/master/machine_learing.py)
+
+- Really cool OCR detection simple intro code [here](https://github.com/kazzastic/CV/blob/master/OCR.py)
+
+and yea just 
+```bash 
+pip install opencv-python
+pip install face_recognition 
+pip install PIL 
+pip install get_a_life_jk
+```
+:D
