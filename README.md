@@ -12,6 +12,8 @@ some really amazing works here include
 
 - Image classification using GoogleNet and ImageNet [here](https://github.com/kazzastic/CV/blob/master/Deep%20Learning/image_classification.ipynb)
 
+- Image Colorization using VGGNet [here](https://github.com/kazzastic/CV/blob/master/Deep%20Learning/Assignment%20%23%206%20(Image%20Colorization).ipynb)
+
 and yea just 
 ```bash 
 pip install opencv-python
@@ -20,3 +22,4 @@ pip install PIL
 pip install get_a_life_jk
 ```
 :D
+ 
