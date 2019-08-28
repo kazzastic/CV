@@ -16,6 +16,9 @@ some really amazing works here include
 - Image Colorization using VGGNet [here](https://github.com/kazzastic/CV/blob/master/Deep%20Learning/Assignment%20%23%206%20(Image%20Colorization).ipynb)
 
 
+- Introduction to Transfer Learning [here](https://github.com/kazzastic/CV/blob/master/Transfer%20Learning/Trasnfer%20Learning.ipynb)
+
+
 and yea just 
 ```bash 
 pip install opencv-python
